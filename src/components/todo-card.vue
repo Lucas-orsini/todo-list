@@ -8,13 +8,15 @@
     </div>
 </header>
 <component-new-todo @sendTask="addTask"></component-new-todo>
-   
+<component-todo-list :tasktab="tasktab"></component-todo-list>
 </section>
 </template>
 
 
 <script>
+const tasktab = [];
 import newTodoVue from './newTodo.vue';
+import TodoListVue from './TodoList.vue';
 export default {
     name: "App",
         el: '#todo-date',
@@ -27,6 +29,7 @@ export default {
 
   components: {
     'component-new-todo': newTodoVue,
+    'component-todo-list':TodoListVue
   },
 
    methods: {
@@ -41,8 +44,13 @@ export default {
 
    
     },
+    
     addTask(a){
-        console.log(a);
+        let task ={
+            taskName : a,
+            checked : false
+        }
+       tasktab.push(task);
     }
     
   }

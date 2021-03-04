@@ -5,7 +5,7 @@
                <div>
               <component-todo></component-todo>
               
-              <component-todo-list></component-todo-list>
+              
               </div>
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -34,14 +34,13 @@
 </template>
 
 <script>
-import TodoListVue from './components/TodoList.vue'
 import todoCardVue from './components/todo-card.vue'
 
 export default {
  el: '#app',
   components: {
-    'component-todo': todoCardVue,
-    'component-todo-list':TodoListVue,
+    'component-todo': todoCardVue
+    
   },
 
 }
