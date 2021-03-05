@@ -14,7 +14,7 @@
 
 
 <script>
-const tasktab = [];
+
 import newTodoVue from './newTodo.vue';
 import TodoListVue from './TodoList.vue';
 export default {
@@ -24,7 +24,8 @@ export default {
    data(){
         return{
             count: 0,
-            topTitle: "VueJs Tutorial ToDo List"
+            topTitle: "VueJs Tutorial ToDo List",
+            tasktab : []
             }
     },
 
@@ -51,7 +52,7 @@ export default {
             taskName : a,
             checked : false
         }
-       tasktab.push(task);
+       this.tasktab.push(task);
     }
     
   }
