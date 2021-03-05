@@ -1,12 +1,10 @@
 <template>
 <section>
-<header>
     <div class="top" id="todo-date">
     <h3 class="title">{{ currentDateTime() }}</h3>   
     <h3 class="topTitle">{{ topTitle }}</h3>
-    <h3 class="title">{{count}}</h3>
+    <h3 class="title">{{count}} tâches</h3>
     </div>
-</header>
 <component-new-todo @sendTask="addTask"></component-new-todo>
 <component-todo-list :tasktab="tasktab" @check="checkItems" @remove="removeItems"></component-todo-list>
 </section>
@@ -86,6 +84,11 @@ export default {
     }
  section {
      background-color: #fff;
+     max-width: 80%;
+     display: block;
+     margin: 0 auto;
+     border-radius: 20px;
+     margin-top: 25vh;
  }
  .top {
      display: flex;
@@ -103,6 +106,9 @@ export default {
 header {
     margin-top: 35vh;
 }
-
+.topTitle {
+    color: green;
+    font-size: 25px;
+}
 
 </style>
