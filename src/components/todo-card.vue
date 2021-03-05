@@ -55,7 +55,7 @@ export default {
        this.tasktab.push(task);
     },
     checkItems(watch){
-        if(tasktab.checked == false){
+        if(watch.checked == false){
             watch.checked = true
         }
         else if(watch.checked == true){
@@ -64,8 +64,8 @@ export default {
 
     },
     removeItems(watch){
-        const test = this.tasktab.indexOf(watch);
-        this.tasktab.splice(test, 1);
+        const die = this.tasktab.indexOf(watch);
+        this.tasktab.splice(die, 1);
     }
     
   }
