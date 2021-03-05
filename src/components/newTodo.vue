@@ -2,8 +2,8 @@
 
 <template>
       <div class="search">
-        <input type="text" v-model="taskName">
-        <button type="submit" @click="NewTask()"> + </button>
+        <input type="text" v-model="taskName" placeholder="Nouvelle tâche...">
+        <button type="submit" @click="NewTask()"> <i class="fas fa-plus"></i> </button>
     </div>
 </template>
 
@@ -37,11 +37,13 @@ export default {
      display: flex;
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 5vh;
 }
 .search input {
     border: none;
     border-bottom: solid green;
     outline-style: none;
+    font-size: 20px;
 }
 button {
     margin-left: 20px;
@@ -51,6 +53,8 @@ button {
     color: #fff;
     outline-style: none;
     cursor:pointer;
+    width: 40px;
+    height: 40px;
     
 }
 
