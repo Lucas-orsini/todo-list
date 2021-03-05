@@ -55,9 +55,11 @@ export default {
     checkItems(watch){
         if(watch.checked == false){
             watch.checked = true
+            this.tasktab.indexOf(watch);
         }
-        else if(watch.checked == true){
+        else{
             watch.checked = false
+            this.tasktab.indexOf(watch);
         }
 
     },

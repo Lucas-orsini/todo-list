@@ -3,10 +3,10 @@
 
 <div class="newTodo" v-for="items in tasktab" :key="items" :items="items"> 
 <div class="round">
-    <input @click="check(items)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
+    <input @click="check(item)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
      <label for="checkbox"></label>
      </div>
-    <p :key="items" v-bind:class="{checked : items.checked}">{{items.taskName}}</p>
+    <p v-bind:class="{'checked' : items.checked}">{{items.taskName}}</p>
     <button type="button" name="delete" id="delete" :key="items" @click="remove(items)"><i class="fas fa-trash fa-2x"></i></button>
     </div>
 </template>
