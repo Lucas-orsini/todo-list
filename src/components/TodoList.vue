@@ -4,7 +4,6 @@
 <div class="newTodo" v-for="items in tasktab" :key="items" :items="items"> 
 <div class="round">
     <input @click="check(item)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
-     <label for="checkbox"></label>
      </div>
     <p v-bind:class="{'checked' : items.checked}">{{items.taskName}}</p>
     <button type="button" name="delete" id="delete" :key="items" @click="remove(items)"><i class="fas fa-trash fa-2x"></i></button>
@@ -58,50 +57,23 @@ button i{
 }
 
 
-
-
-.round {
-  position: relative;
+#checkbox {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.round label {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
+#checkbox:checked {
+    background-color: green;
 }
 
-.round label:after {
-  border: 2px solid #fff;
-  border-top: none;
-  border-right: none;
-  content: "";
-  height: 6px;
-  left: 7px;
-  opacity: 0;
-  position: absolute;
-  top: 8px;
-  transform: rotate(-45deg);
-  width: 12px;
-}
 
-.round input[type="checkbox"] {
-  visibility: hidden;
-}
-
-.round input[type="checkbox"]:checked + label {
-  background-color: #66bb6a;
-  border-color: #66bb6a;
-}
-
-.round input[type="checkbox"]:checked + label:after {
-  opacity: 1;
-}
 
 
 
