@@ -2,8 +2,8 @@
     
 
 <div class="newTodo" v-for="items in tasktab" :key="items" :items="items"> 
-    <input type="checkbox" name="done" id="checkbox" v-model="checked" :key="items">
-    <p :key="items">{{items.taskName}}</p>
+    <input @click="check(items)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
+    <p :key="items" v-bind:class="{checked : items.checked}">{{items.taskName}}</p>
     <input type="button" name="delete" id="delete" :key="items">
     </div>
 </template>
