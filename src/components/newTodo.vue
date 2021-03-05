@@ -36,5 +36,22 @@ export default {
     background-color: #fff;
      display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
+.search input {
+    border: none;
+    border-bottom: solid green;
+    outline-style: none;
+}
+button {
+    margin-left: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: green;
+    color: #fff;
+    outline-style: none;
+    cursor:pointer;
+    
+}
+
 </style>
