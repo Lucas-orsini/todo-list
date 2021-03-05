@@ -3,7 +3,7 @@
 <header>
     <div class="top" id="todo-date">
     <h3 class="title">{{ currentDateTime() }}</h3>   
-    <h3 class="top-title">Todo List</h3>
+    <h3 class="topTitle">{{ topTitle }}</h3>
     <h3 class="title">{{count}}</h3>
     </div>
 </header>
@@ -23,7 +23,8 @@ export default {
         
    data(){
         return{
-            count: 0
+            count: 0,
+            topTitle: "VueJs Tutorial ToDo List"
             }
     },
 
@@ -85,7 +86,9 @@ export default {
 .title {
     color:grey;
 }
-
+header {
+    margin-top: 35vh;
+}
 
 
 </style>

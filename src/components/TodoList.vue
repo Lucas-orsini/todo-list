@@ -7,7 +7,7 @@
     <input type="button" name="delete" id="delete">
     </div>
 </template>
-<!--
+
 <script>
 export default {
     props : {
