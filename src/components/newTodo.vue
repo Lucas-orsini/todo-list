@@ -16,10 +16,6 @@ export default {
         }
     },
     methods:{
-        //   taskCount(){
-        //     this.count++
-            
-        // },
         NewTask() {
             if(this.taskName != "") {
                 this.$emit('sendTask', this.taskName)

@@ -3,7 +3,7 @@
     <div class="top" id="todo-date">
     <h3 class="title">{{ currentDateTime() }}</h3>   
     <h3 class="topTitle">{{ topTitle }}</h3>
-    <h3 class="title">{{count}} tâches</h3>
+    <h3 class="title">{{tasktab.length}} tâches</h3>
     </div>
 <component-new-todo @sendTask="addTask"></component-new-todo>
 <component-todo-list :tasktab="tasktab" @check="checkItems" @remove="removeItems"></component-todo-list>
