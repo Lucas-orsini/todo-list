@@ -3,8 +3,7 @@
 
 <div class="newTodo" v-for="items in tasktab" :key="items" :items="items"> 
 <div class="round">
-    <input class="checkbox-round" @click="check(items)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
-     <label for="checkbox"></label>
+    <input @click="check(item)" type="checkbox" name="done" id="checkbox"  v-model="checked" :key="items">
      </div>
     <p :key="items" v-bind:class="{checked : items.checked}">{{items.taskName}}</p>
     <button type="button" name="delete" id="delete" :key="items" @click="remove(items)"><i class="fas fa-trash fa-2x"></i></button>
@@ -58,7 +57,7 @@ button i{
 }
 
 
-.checkbox-round {
+#checkbox {
     width: 1.3em;
     height: 1.3em;
     background-color: white;
@@ -70,9 +69,13 @@ button i{
     cursor: pointer;
 }
 
-.checkbox-round:checked {
+#checkbox:checked {
     background-color: green;
 }
+
+
+
+
 
 
 
